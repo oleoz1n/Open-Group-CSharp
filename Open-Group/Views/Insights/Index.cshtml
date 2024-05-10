@@ -1,0 +1,58 @@
+﻿@model IEnumerable<Open_Group.Models.Insight>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.DataGeracao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Detalhes)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Recomendacao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Impacto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DadosCliente)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataGeracao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Detalhes)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Recomendacao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Impacto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DadosCliente.IdDados)
+            </td>
+            <td>
+                <a asp-action="Details" asp-route-id="@item.IdInsight">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdInsight">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

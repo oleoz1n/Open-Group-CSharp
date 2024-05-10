@@ -1,9 +1,12 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
+using Microsoft.EntityFrameworkCore;
 
 namespace Open_Group.Models
 {
     [Table("T_OP_USUARIO")]
+    [Index(nameof(Email), IsUnique = true)]
+    [Index(nameof(Identificacao), IsUnique = true)]
     public class Usuario
     {
         [Key]
@@ -24,6 +27,7 @@ namespace Open_Group.Models
         [EmailAddress]
         public string Email { get; set; }
 
+        [Required]
         [StringLength(20)]
         [Phone]
         public string Telefone { get; set; }

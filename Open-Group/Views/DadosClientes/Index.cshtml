@@ -1,0 +1,106 @@
+﻿@model IEnumerable<Open_Group.Models.DadosCliente>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Segmento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Localizacao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TempoAtuacao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumFuncionarios)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FaturamentoAnual)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CanalVenda)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProdutoServico)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tipo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Porte)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Concorrente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Desafio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Objetivo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Usuario)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Segmento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Localizacao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TempoAtuacao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumFuncionarios)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FaturamentoAnual)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CanalVenda)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProdutoServico)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tipo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Porte)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Concorrente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Desafio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Objetivo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Usuario.Email)
+            </td>
+            <td>
+                <a asp-action="Details" asp-route-id="@item.IdDados">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdDados">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

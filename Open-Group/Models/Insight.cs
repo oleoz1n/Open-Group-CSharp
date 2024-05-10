@@ -12,11 +12,6 @@ namespace Open_Group.Models
         public int IdInsight { get; set; }
 
         [Required]
-        [Column("DADOS_INSIGHT")]
-        public int DadosInsight{ get; set; } // 1..N
-        public DadosCliente? DadosCliente { get; set; }
-
-        [Required]
         [Column("DATA_GERACAO")]
         public DateTime DataGeracao { get; set; }
 
@@ -28,8 +23,12 @@ namespace Open_Group.Models
         [StringLength(255)]
         public string Recomendacao { get; set; }
 
-
         [Required]
         public int Impacto { get; set; }
+
+        [Required]
+        [Column("DADOS_INSIGHT")]
+        public int DadosClienteId { get; set; } // 1..N
+        public DadosCliente? DadosCliente { get; set; }
     }
 }

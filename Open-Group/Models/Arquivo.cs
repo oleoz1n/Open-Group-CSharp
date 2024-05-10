@@ -11,10 +11,6 @@ namespace Open_Group.Models
         [Column("ID_ARQUIVO")]
         public int IdArquivo { get; set; }
 
-        [Column("DADOS_ARQUIVO")]
-        public int IdDadosArquivo { get; set; } // 1..N
-        public DadosCliente? DadosArquivo { get; set; }
-
         [Required]
         [StringLength(255)]
         public string Nome { get; set; }
@@ -31,13 +27,20 @@ namespace Open_Group.Models
 
         [StringLength(255)]
         [Required]
+        [Url]
         public string Link { get; set; }
 
         [StringLength(255)]
         [Column("PALAVRA_CHAVE")]
-        public string PalavraChave { get; set; }
+        public string? PalavraChave { get; set; }
 
         [StringLength(255)]
-        public string Resumo { get; set; }
+        public string? Resumo { get; set; }
+
+
+        [Column("DADOS_ARQUIVO")]
+        [Required]
+        public int DadosClienteId { get; set; } // 1..N
+        public DadosCliente? DadosCliente { get; set; }
     }
 }

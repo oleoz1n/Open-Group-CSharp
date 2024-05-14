@@ -49,7 +49,6 @@ namespace Open_Group.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("IdDados,Segmento,Localizacao,TempoAtuacao,NumFuncionarios,FaturamentoAnual,CanalVenda,ProdutoServico,Tipo,Porte,Concorrente,Desafio,Objetivo,UsuarioId")] DadosCliente dadosCliente)
         {
             if (ModelState.IsValid)
@@ -66,7 +65,6 @@ namespace Open_Group.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("IdDados,Segmento,Localizacao,TempoAtuacao,NumFuncionarios,FaturamentoAnual,CanalVenda,ProdutoServico,Tipo,Porte,Concorrente,Desafio,Objetivo,UsuarioId")] DadosCliente dadosCliente)
         {
             if (id != dadosCliente.IdDados)

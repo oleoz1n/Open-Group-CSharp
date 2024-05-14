@@ -15,25 +15,32 @@ namespace Open_Group.Models
         public int IdUsuario { get; set; }
 
         [Required]
-        [StringLength(255)]
+        [StringLength(100)]
+        [MinLength(3)]
+        [MaxLength(100)]
         public string Nome { get; set; }
 
         [Required]
         [StringLength(50)]
+        [MaxLength(50)]
         public string Identificacao { get; set; }
 
         [Required]
         [StringLength(255)]
+        [MaxLength(255)]
         [EmailAddress]
         public string Email { get; set; }
 
         [Required]
         [StringLength(20)]
-        [Phone]
+        [MinLength(9)]
+        [MaxLength(20)]
         public string Telefone { get; set; }
 
         [Required]
-        [StringLength(255)]
+        [StringLength(50)]
+        [MinLength(6)]
+        [MaxLength(50)]
         public string Senha { get; set; }
 
         [Required]

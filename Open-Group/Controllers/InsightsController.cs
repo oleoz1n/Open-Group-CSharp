@@ -49,7 +49,6 @@ namespace Open_Group.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("IdInsight,DataGeracao,Detalhes,Recomendacao,Impacto,DadosClienteId")] Insight insight)
         {
 
@@ -68,7 +67,6 @@ namespace Open_Group.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("IdInsight,DataGeracao,Detalhes,Recomendacao,Impacto,DadosClienteId")] Insight insight)
         {
             if (id != insight.IdInsight)

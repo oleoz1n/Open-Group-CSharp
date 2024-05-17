@@ -7,17 +7,17 @@
 </h1>
 <div>
     <h2>Descrição da Aplicação</h2>
-    <div style="padding-left: 2rem;">
+    <div class="pl-2">
     <h3>Introdução</h3>
     <p>
-        Nossa aplicação possui 4 CRUDs, sendo eles: Usuários, DadosClientes, Arquivos e Insights.
-        Sendo que as classes Usuário e Arquivo possuem views para todos os métodos do CRUD e as classes DadosCliente e Insight só possuem as views de get e delete.
+        Nossa aplicação possui 4 CRUDs, sendo eles: Usuários, DadosClientes, Arquivos e Insights. Sendo que as classes Usuário e
+        Arquivo possuem views para todos os métodos do CRUD e as classes DadosCliente e Insight só possuem as views de get e delete.
     </p>
     <h3>Explicação das classes</h3>
     <ul>
         <li><span class="fw-bold">Usuário:</span> Classe dos Usuários que utilizarão nossa aplicação</li>
-        <li><span class="fw-bold">Dados Cliente:</span> Classe para armazrnar informações de contexto dos nossos clientes</li>
-        <li><span class="fw-bold">Arquivos:</span> Classe para armazenar os arquivos que serão processados pela nossa IA</li>
+        <li><span class="fw-bold">Dados Cliente:</span> Classe para armazrnar informações de contexto dos nossos clientes gerados pela nossa IA</li>
+        <li><span class="fw-bold">Arquivos:</span> Classe para armazenar informações dos arquivos que serão processados pela nossa IA</li>
         <li><span class="fw-bold">Insights:</span> Classe para armazenar os insights gerados pela nossa IA</li>
     </ul>
     <h3>Observações</h3>
@@ -25,12 +25,13 @@
         <li class="fw-bold">O projeto ainda está em desenvolvimento, está não é a versão final. </li>
         <li class="fw-bold">Como melhoria pretendemos fazer o upload de arquivos e realizar a persistencia do mesmo em nuvem pela Azure.</li>
         <li class="fw-bold">As classes que não fizemos as views, na versão final serão preenchidas por uma IA.</li>
+            <li class="fw-bold">Para inserir ou alterar dados nas classes DadosCliente e Insight, é necessário fazer um post por form-data na rotas de Edit e Create.</li>
     </ul>
     </div>
 </div>
 <div>
-    <h2>Idealização</h2>
-<div style="padding-left: 2rem;">
+    <h2>Ideia</h2>
+    <div class="pl-2">
     <h3>Problema</h3>
     <p class="ident-2">
         A crescente dependência de dados gera desafios para empresas que

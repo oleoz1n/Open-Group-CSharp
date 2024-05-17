@@ -24,3 +24,7 @@ body {
 .ident-2 {
     text-indent: 2rem;
 }
+
+.pl-2 {
+    padding-left: 2rem;
+}
